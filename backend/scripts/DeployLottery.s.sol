@@ -10,8 +10,8 @@ contract DeployLottery is Script {
     function run() external returns (Lottery) {
         vm.startBroadcast();
         // MockDapiProxy mockDapiProxy = new MockDapiProxy();
-        Lottery lottery = new Lottery(address(0x6238772544f029ecaBfDED4300f13A3c4FE84E1D));
+        Lottery lotteryContract = new Lottery(0xa0AD79D995DdeeB18a14eAef56A549A04e3Aa1Bd);
         vm.stopBroadcast();
-        return (lottery);
+        return (lotteryContract);
     }
 }

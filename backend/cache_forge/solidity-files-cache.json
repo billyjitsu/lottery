@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Lottery.sol": {
-      "lastModificationDate": 1693858715888,
-      "contentHash": "71cccd1609d1cf31e083e41b5c6cbfe4",
+      "lastModificationDate": 1693878231070,
+      "contentHash": "14dd4f096615a5445e51c479f2830f6f",
       "sourceName": "contracts/Lottery.sol",
       "solcConfig": {
         "settings": {
@@ -57,6 +57,46 @@
       "artifacts": {
         "Lottery": {
           "0.8.9+commit.e5eed63a.Windows.msvc": "Lottery.sol\\Lottery.json"
+        }
+      }
+    },
+    "contracts/Mocks/MockQRNG.sol": {
+      "lastModificationDate": 1693889969327,
+      "contentHash": "60728a377c022767e626995f935ecccf",
+      "sourceName": "contracts/Mocks/MockQRNG.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "MockQRNGProxy": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "MockQRNG.sol\\MockQRNGProxy.json"
         }
       }
     },
@@ -146,60 +186,6 @@
         },
         "TestBase": {
           "0.8.9+commit.e5eed63a.Windows.msvc": "Base.sol\\TestBase.json"
-        }
-      }
-    },
-    "lib/forge-std/src/Script.sol": {
-      "lastModificationDate": 1693803466326,
-      "contentHash": "c4749ea7bff7642862a7ce9520fc21f2",
-      "sourceName": "lib/forge-std/src/Script.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/forge-std/src/safeconsole.sol"
-      ],
-      "versionRequirement": ">=0.6.2, <0.9.0",
-      "artifacts": {
-        "Script": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "Script.sol\\Script.json"
         }
       }
     },
@@ -1179,72 +1165,9 @@
         }
       }
     },
-    "scripts/DeployLottery.s.sol": {
-      "lastModificationDate": 1693861812210,
-      "contentHash": "ccb2017e0fce8c6a4dd38e4c314d4c67",
-      "sourceName": "scripts/DeployLottery.s.sol",
-      "solcConfig": {
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "ipfs",
-            "appendCBOR": true
-          },
-          "outputSelection": {
-            "*": {
-              "": [
-                "ast"
-              ],
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ]
-            }
-          },
-          "evmVersion": "london",
-          "libraries": {}
-        }
-      },
-      "imports": [
-        "contracts\\Lottery.sol",
-        "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src\\Script.sol",
-        "lib/forge-std/src/StdChains.sol",
-        "lib/forge-std/src/StdCheats.sol",
-        "lib/forge-std/src/StdJson.sol",
-        "lib/forge-std/src/StdMath.sol",
-        "lib/forge-std/src/StdStorage.sol",
-        "lib/forge-std/src/StdStyle.sol",
-        "lib/forge-std/src/StdUtils.sol",
-        "lib/forge-std/src/Vm.sol",
-        "lib/forge-std/src/console.sol",
-        "lib/forge-std/src/console2.sol",
-        "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/forge-std/src/safeconsole.sol",
-        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol",
-        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAuthorizationUtilsV0.sol",
-        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/ITemplateUtilsV0.sol",
-        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol",
-        "node_modules/@api3\\airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol",
-        "node_modules/@openzeppelin\\contracts/access/Ownable.sol",
-        "node_modules/@openzeppelin/contracts/utils/Context.sol"
-      ],
-      "versionRequirement": "=0.8.9",
-      "artifacts": {
-        "DeployLottery": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "DeployLottery.s.sol\\DeployLottery.json"
-        }
-      }
-    },
     "test/TestLottery.t.sol": {
-      "lastModificationDate": 1693861916887,
-      "contentHash": "d9304dbb5ce5b98c10338bb91bce3a18",
+      "lastModificationDate": 1693889347228,
+      "contentHash": "22c362b021440f077e0341cf2fbde0de",
       "sourceName": "test/TestLottery.t.sol",
       "solcConfig": {
         "settings": {
@@ -1276,9 +1199,9 @@
       },
       "imports": [
         "contracts\\Lottery.sol",
+        "contracts\\Mocks\\MockQRNG.sol",
         "lib/ds-test/src\\test.sol",
         "lib/forge-std/src/Base.sol",
-        "lib/forge-std/src\\Script.sol",
         "lib/forge-std/src/StdAssertions.sol",
         "lib/forge-std/src/StdChains.sol",
         "lib/forge-std/src/StdCheats.sol",
@@ -1301,13 +1224,12 @@
         "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol",
         "node_modules/@api3\\airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol",
         "node_modules/@openzeppelin\\contracts/access/Ownable.sol",
-        "node_modules/@openzeppelin/contracts/utils/Context.sol",
-        "scripts/DeployLottery.s.sol"
+        "node_modules/@openzeppelin/contracts/utils/Context.sol"
       ],
       "versionRequirement": "=0.8.9",
       "artifacts": {
-        "TestPriceFee": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "TestLottery.t.sol\\TestPriceFee.json"
+        "TestLottery": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "TestLottery.t.sol\\TestLottery.json"
         }
       }
     }
