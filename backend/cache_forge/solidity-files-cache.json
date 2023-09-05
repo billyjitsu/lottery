@@ -13,8 +13,8 @@
   },
   "files": {
     "contracts/Lottery.sol": {
-      "lastModificationDate": 1693690913247,
-      "contentHash": "17d11ff6020caac689f7208fc3d1b624",
+      "lastModificationDate": 1693858715888,
+      "contentHash": "71cccd1609d1cf31e083e41b5c6cbfe4",
       "sourceName": "contracts/Lottery.sol",
       "solcConfig": {
         "settings": {
@@ -23,7 +23,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -41,7 +40,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -57,14 +56,14 @@
       "versionRequirement": "^0.8.9",
       "artifacts": {
         "Lottery": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "Lottery.sol\\Lottery.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Lottery.sol\\Lottery.json"
         }
       }
     },
-    "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol": {
-      "lastModificationDate": 1693682094621,
-      "contentHash": "956233427805a2b9c588d50344326194",
-      "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol",
+    "lib/ds-test/src/test.sol": {
+      "lastModificationDate": 1693803466314,
+      "contentHash": "2df678a5b2611e0d7bc9ef6745d19157",
+      "sourceName": "lib/ds-test/src/test.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -72,7 +71,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -90,7 +88,835 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.5.0",
+      "artifacts": {
+        "DSTest": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "test.sol\\DSTest.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Base.sol": {
+      "lastModificationDate": 1693803466325,
+      "contentHash": "ac34dc048311bd400c5c5351e7975438",
+      "sourceName": "lib/forge-std/src/Base.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "CommonBase": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Base.sol\\CommonBase.json"
+        },
+        "ScriptBase": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Base.sol\\ScriptBase.json"
+        },
+        "TestBase": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Base.sol\\TestBase.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Script.sol": {
+      "lastModificationDate": 1693803466326,
+      "contentHash": "c4749ea7bff7642862a7ce9520fc21f2",
+      "sourceName": "lib/forge-std/src/Script.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Script": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Script.sol\\Script.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdAssertions.sol": {
+      "lastModificationDate": 1693803466327,
+      "contentHash": "d136ed3be15b16e8875196a38f225c2f",
+      "sourceName": "lib/forge-std/src/StdAssertions.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ds-test/src\\test.sol",
+        "lib/forge-std/src/StdMath.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdAssertions": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdAssertions.sol\\StdAssertions.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdChains.sol": {
+      "lastModificationDate": 1693803466328,
+      "contentHash": "07f5d75b9e95e2f04fe1649eb54a48d4",
+      "sourceName": "lib/forge-std/src/StdChains.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdChains": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdChains.sol\\StdChains.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdCheats.sol": {
+      "lastModificationDate": 1693803466330,
+      "contentHash": "067695a2e8113e096c496cd6b8bec21c",
+      "sourceName": "lib/forge-std/src/StdCheats.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdCheats": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdCheats.sol\\StdCheats.json"
+        },
+        "StdCheatsSafe": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdCheats.sol\\StdCheatsSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdError.sol": {
+      "lastModificationDate": 1693803466330,
+      "contentHash": "8c35ad419c5b8748575080db5fd58cae",
+      "sourceName": "lib/forge-std/src/StdError.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdError": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdError.sol\\stdError.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdInvariant.sol": {
+      "lastModificationDate": 1693803466331,
+      "contentHash": "2e3254214dc16cfad6b77e4d75bc678f",
+      "sourceName": "lib/forge-std/src/StdInvariant.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdInvariant": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdInvariant.sol\\StdInvariant.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdJson.sol": {
+      "lastModificationDate": 1693803466332,
+      "contentHash": "27202267153a6ea6fe292efcd9a6f51f",
+      "sourceName": "lib/forge-std/src/StdJson.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.0, <0.9.0",
+      "artifacts": {
+        "stdJson": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdJson.sol\\stdJson.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdMath.sol": {
+      "lastModificationDate": 1693803466332,
+      "contentHash": "fc64b149e462e64dea89f50e9cc0318f",
+      "sourceName": "lib/forge-std/src/StdMath.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdMath": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdMath.sol\\stdMath.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdStorage.sol": {
+      "lastModificationDate": 1693803466333,
+      "contentHash": "023abcd479ed36f04ac72d8bd9bdaa7a",
+      "sourceName": "lib/forge-std/src/StdStorage.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "stdStorage": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdStorage.sol\\stdStorage.json"
+        },
+        "stdStorageSafe": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdStorage.sol\\stdStorageSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdStyle.sol": {
+      "lastModificationDate": 1693803466334,
+      "contentHash": "f5cb431eb5bd89ef37aaf831fc099459",
+      "sourceName": "lib/forge-std/src/StdStyle.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol"
+      ],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "StdStyle": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdStyle.sol\\StdStyle.json"
+        }
+      }
+    },
+    "lib/forge-std/src/StdUtils.sol": {
+      "lastModificationDate": 1693803466335,
+      "contentHash": "4b91d5e3edfc402cc60d03f0cc9a8f0e",
+      "sourceName": "lib/forge-std/src/StdUtils.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "StdUtils": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StdUtils.sol\\StdUtils.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Test.sol": {
+      "lastModificationDate": 1693803466335,
+      "contentHash": "7efdfd19fef655d8a6bca92dc3c00415",
+      "sourceName": "lib/forge-std/src/Test.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ds-test/src\\test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol"
+      ],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Test": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Test.sol\\Test.json"
+        }
+      }
+    },
+    "lib/forge-std/src/Vm.sol": {
+      "lastModificationDate": 1693803466336,
+      "contentHash": "23549d74e031dcaf255354078000cdca",
+      "sourceName": "lib/forge-std/src/Vm.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "Vm": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Vm.sol\\Vm.json"
+        },
+        "VmSafe": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Vm.sol\\VmSafe.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console.sol": {
+      "lastModificationDate": 1693803466337,
+      "contentHash": "c8cf989d04bc2e3069e3d91facf3b69c",
+      "sourceName": "lib/forge-std/src/console.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "console.sol\\console.json"
+        }
+      }
+    },
+    "lib/forge-std/src/console2.sol": {
+      "lastModificationDate": 1693803466338,
+      "contentHash": "84bf7223a45eb5be69eae69a26531306",
+      "sourceName": "lib/forge-std/src/console2.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.22, <0.9.0",
+      "artifacts": {
+        "console2": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "console2.sol\\console2.json"
+        }
+      }
+    },
+    "lib/forge-std/src/interfaces/IMulticall3.sol": {
+      "lastModificationDate": 1693803466346,
+      "contentHash": "5de707a0d82c8f56049fbd3ba28944ed",
+      "sourceName": "lib/forge-std/src/interfaces/IMulticall3.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "IMulticall3": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "IMulticall3.sol\\IMulticall3.json"
+        }
+      }
+    },
+    "lib/forge-std/src/safeconsole.sol": {
+      "lastModificationDate": 1693803466348,
+      "contentHash": "b78b3af4008494f560706b3e44286080",
+      "sourceName": "lib/forge-std/src/safeconsole.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.6.2, <0.9.0",
+      "artifacts": {
+        "safeconsole": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "safeconsole.sol\\safeconsole.json"
+        }
+      }
+    },
+    "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol": {
+      "lastModificationDate": 1693856926739,
+      "contentHash": "956233427805a2b9c588d50344326194",
+      "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -102,12 +928,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IAirnodeRrpV0": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "IAirnodeRrpV0.sol\\IAirnodeRrpV0.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "IAirnodeRrpV0.sol\\IAirnodeRrpV0.json"
         }
       }
     },
     "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAuthorizationUtilsV0.sol": {
-      "lastModificationDate": 1693682094621,
+      "lastModificationDate": 1693856926739,
       "contentHash": "3db936311aea24d821820e27f83aa69e",
       "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAuthorizationUtilsV0.sol",
       "solcConfig": {
@@ -117,7 +943,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -135,7 +960,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -143,12 +968,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IAuthorizationUtilsV0": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "IAuthorizationUtilsV0.sol\\IAuthorizationUtilsV0.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "IAuthorizationUtilsV0.sol\\IAuthorizationUtilsV0.json"
         }
       }
     },
     "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/ITemplateUtilsV0.sol": {
-      "lastModificationDate": 1693682094621,
+      "lastModificationDate": 1693856926739,
       "contentHash": "098a8d98d08bc79a054b61e12e8983f9",
       "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/ITemplateUtilsV0.sol",
       "solcConfig": {
@@ -158,7 +983,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -176,7 +1000,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -184,12 +1008,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "ITemplateUtilsV0": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "ITemplateUtilsV0.sol\\ITemplateUtilsV0.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "ITemplateUtilsV0.sol\\ITemplateUtilsV0.json"
         }
       }
     },
     "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol": {
-      "lastModificationDate": 1693682094621,
+      "lastModificationDate": 1693856926739,
       "contentHash": "40b54b05ad57a662ff48f677c0dc413d",
       "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol",
       "solcConfig": {
@@ -199,7 +1023,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -217,7 +1040,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -225,12 +1048,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "IWithdrawalUtilsV0": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "IWithdrawalUtilsV0.sol\\IWithdrawalUtilsV0.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "IWithdrawalUtilsV0.sol\\IWithdrawalUtilsV0.json"
         }
       }
     },
     "node_modules/@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol": {
-      "lastModificationDate": 1693682094621,
+      "lastModificationDate": 1693856926739,
       "contentHash": "73496fe3ea176c4f71c00e5372c10a75",
       "sourceName": "node_modules/@api3/airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol",
       "solcConfig": {
@@ -240,7 +1063,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -258,7 +1080,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -271,12 +1093,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "RrpRequesterV0": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "RrpRequesterV0.sol\\RrpRequesterV0.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "RrpRequesterV0.sol\\RrpRequesterV0.json"
         }
       }
     },
     "node_modules/@openzeppelin/contracts/access/Ownable.sol": {
-      "lastModificationDate": 1692626796868,
+      "lastModificationDate": 1692425564904,
       "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
       "sourceName": "node_modules/@openzeppelin/contracts/access/Ownable.sol",
       "solcConfig": {
@@ -286,7 +1108,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -304,7 +1125,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -314,12 +1135,12 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Ownable": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "Ownable.sol\\Ownable.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Ownable.sol\\Ownable.json"
         }
       }
     },
     "node_modules/@openzeppelin/contracts/utils/Context.sol": {
-      "lastModificationDate": 1692626796868,
+      "lastModificationDate": 1692425564904,
       "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
       "sourceName": "node_modules/@openzeppelin/contracts/utils/Context.sol",
       "solcConfig": {
@@ -329,7 +1150,6 @@
             "runs": 200
           },
           "metadata": {
-            "useLiteralContent": false,
             "bytecodeHash": "ipfs",
             "appendCBOR": true
           },
@@ -347,7 +1167,7 @@
               ]
             }
           },
-          "evmVersion": "paris",
+          "evmVersion": "london",
           "libraries": {}
         }
       },
@@ -355,7 +1175,139 @@
       "versionRequirement": "^0.8.0",
       "artifacts": {
         "Context": {
-          "0.8.19+commit.7dd6d404.Windows.msvc": "Context.sol\\Context.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Context.sol\\Context.json"
+        }
+      }
+    },
+    "scripts/DeployLottery.s.sol": {
+      "lastModificationDate": 1693861812210,
+      "contentHash": "ccb2017e0fce8c6a4dd38e4c314d4c67",
+      "sourceName": "scripts/DeployLottery.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts\\Lottery.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src\\Script.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAuthorizationUtilsV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/ITemplateUtilsV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol",
+        "node_modules/@api3\\airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol",
+        "node_modules/@openzeppelin\\contracts/access/Ownable.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "=0.8.9",
+      "artifacts": {
+        "DeployLottery": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "DeployLottery.s.sol\\DeployLottery.json"
+        }
+      }
+    },
+    "test/TestLottery.t.sol": {
+      "lastModificationDate": 1693861916887,
+      "contentHash": "d9304dbb5ce5b98c10338bb91bce3a18",
+      "sourceName": "test/TestLottery.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "contracts\\Lottery.sol",
+        "lib/ds-test/src\\test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src\\Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src\\Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAirnodeRrpV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IAuthorizationUtilsV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/ITemplateUtilsV0.sol",
+        "node_modules/@api3/airnode-protocol/contracts/rrp/interfaces/IWithdrawalUtilsV0.sol",
+        "node_modules/@api3\\airnode-protocol/contracts/rrp/requesters/RrpRequesterV0.sol",
+        "node_modules/@openzeppelin\\contracts/access/Ownable.sol",
+        "node_modules/@openzeppelin/contracts/utils/Context.sol",
+        "scripts/DeployLottery.s.sol"
+      ],
+      "versionRequirement": "=0.8.9",
+      "artifacts": {
+        "TestPriceFee": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "TestLottery.t.sol\\TestPriceFee.json"
         }
       }
     }

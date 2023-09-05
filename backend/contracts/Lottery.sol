@@ -16,6 +16,7 @@ contract Lottery is RrpRequesterV0, Ownable {
     uint256 public endTime; // datetime that current currentLotto ends and lottery is closable
     uint256 public max_number; // highest possible number
     uint256 public fee = 0.01 ether;
+    uint256 public max_duration = 604800; // 1 week in seconds
 
     address public airnode;
     address public sponsorWallet;
@@ -31,6 +32,7 @@ contract Lottery is RrpRequesterV0, Ownable {
     error LotteryNotEnded();
     error NeedToTopUpSponsorWallet();
     error RequestDoesNotExist(bytes32 requestId);
+    error PastTheMaxDuration(uint256 duration);
 
     // Mappings
     mapping(uint256 => mapping(uint256 => address[])) public tickets; // mapping of currentLotto => entry number choice => list of addresses that bought that entry number
@@ -64,20 +66,13 @@ contract Lottery is RrpRequesterV0, Ownable {
     /// Requiring a small payment to stop spamming of lotteries
     function startLottery(uint256 _ticketPrice, uint256 _max_number, uint256 _durationInSeconds) payable external {
         if (msg.value < fee ) revert NotEnoughEther();
+        if (_durationInSeconds > max_duration) revert PastTheMaxDuration(_durationInSeconds);
         lotteryStarted = true;
         ticketPrice = _ticketPrice;
         max_number = _max_number;
         endTime = block.timestamp + _durationInSeconds;   
     }
 
-    /// @notice Set the minimum fee required to start a new lottery
-    function setMinimumFee(uint256 _fee) external onlyOwner {
-        fee = _fee;
-    }
-
-    function setMaxDuration(uint256 _durationInSeconds) external onlyOwner {
-    
-    }
 
     /// @notice Buy a ticket for the current currentLotto
     /// @param _number The participant's chosen lottery number for which they're buying a ticket
@@ -92,7 +87,8 @@ contract Lottery is RrpRequesterV0, Ownable {
 
     /// @notice Request winning random number from Airnode
     function getWinningNumber() external payable {
-        if(block.timestamp > endTime) revert LotteryNotEnded();
+        if (lotteryStarted != true) revert LotteryNotStarted();
+        if(block.timestamp < endTime) revert LotteryNotEnded();
         if(msg.value < 0.01 ether) revert NeedToTopUpSponsorWallet();
         bytes32 requestId = airnodeRrp.makeFullRequest(
             airnode,
@@ -152,6 +148,25 @@ contract Lottery is RrpRequesterV0, Ownable {
         returns (address[] memory)
     {
         return tickets[_currentLotto][_number];
+    }
+
+    //Only Owner functions
+
+    /// @notice Set the minimum fee required to start a new lottery
+    function setMinimumFee(uint256 _fee) external onlyOwner {
+        fee = _fee;
+    }
+
+    /// @notice Set the maximum duration of a lottery
+    function setMaxDuration(uint256 _durationInSeconds) external onlyOwner {
+        max_duration = _durationInSeconds;
+    }
+
+    // testing only to be removed
+    function withdraw() external onlyOwner {
+        pot = 0;
+        (bool success, ) = payable(msg.sender).call{value: address(this).balance}("");
+        require(success);
     }
 
     /// @notice Handles when funds are sent directly to the contract address
